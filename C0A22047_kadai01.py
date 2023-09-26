@@ -10,3 +10,20 @@ def main():
     flip_image = pg.transform.flip(bg_img2, True, False)
     rotate_image = pg.transform.rotate(flip_image, 10)
     image_list = [flip_image, rotate_image]
+
+    tmr = 0
+    
+    while True:
+            for event in pg.event.get():
+                if event.type == pg.QUIT: return
+
+            screen.blit(bg_img1, [0, 0])
+            pg.display.update()
+            tmr += 1        
+            clock.tick(10)
+
+if __name__ == "__main__":
+    pg.init()
+    main()
+    pg.quit()
+    sys.exit()
