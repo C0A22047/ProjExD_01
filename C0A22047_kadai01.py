@@ -9,7 +9,7 @@ def main():
     bg_img2 = pg.image.load("ProjExD2023/ex01/fig/3.png")
     flip_image = pg.transform.flip(bg_img2, True, False)
 
-    
+    flip_image2 = pg.transform.flip(bg_img1, True, False)
 
     tmr = 0
     a = 0
@@ -23,10 +23,10 @@ def main():
             for event in pg.event.get():
                 if event.type == pg.QUIT: return
 
+
             x = tmr % 1600
             screen.blit(bg_img1, [-x, 0])
-
-            screen.blit(bg_img1, [1600 - x, 0])
+            screen.blit(flip_image2, [1600-x, 0])
 
 
             screen.blit(image_list[1], [300, 200])
