@@ -12,12 +12,14 @@ def main():
     image_list = [flip_image, rotate_image]
 
     tmr = 0
-    
+
     while True:
             for event in pg.event.get():
                 if event.type == pg.QUIT: return
 
+            
             screen.blit(bg_img1, [0, 0])
+            screen.blit(image_list[tmr%2], [300, 200])
             pg.display.update()
             tmr += 1        
             clock.tick(10)
