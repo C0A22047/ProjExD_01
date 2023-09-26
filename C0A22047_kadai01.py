@@ -8,3 +8,5 @@ def main():
     bg_img1 = pg.image.load("ProjExD2023/ex01/fig/pg_bg.jpg")
     bg_img2 = pg.image.load("ProjExD2023/ex01/fig/3.png")
     flip_image = pg.transform.flip(bg_img2, True, False)
+    rotate_image = pg.transform.rotate(flip_image, 10)
+    image_list = [flip_image, rotate_image]
